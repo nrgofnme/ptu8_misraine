@@ -8,10 +8,10 @@ class MainApp():
         self.f_catalog = Frame(self.main)
         self.l_pasirinkimai = Label(self.f_catalog, text="Pasirinkite")
         self.b_destytojas = Button(self.f_catalog, text="Destytojas", command=self.run_destytojas)
-        self.b_my_app = Button(self.f_catalog, text="Igno programa",command=self.run_igno_app)
+        self.igno_mygtukas = Button(self.f_catalog, text="Igno programa",command=self.run_igno_app)
         self.l_pasirinkimai.pack(side=TOP)
         self.b_destytojas.pack()
-        self.b_my_app.pack()
+        self.igno_mygtukas.pack()
         self.f_catalog.pack()
 
     def run_destytojas(self):
