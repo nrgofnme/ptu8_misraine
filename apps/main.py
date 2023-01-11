@@ -1,5 +1,6 @@
 from tkinter import *
 from apps.destytojas import Destytojas
+from apps.airida import Airida
 from apps.dovydas import Studenciokas
 from apps.monika import Studente
 from apps.igno_app import IgnoApp
@@ -17,6 +18,7 @@ class MainApp():
         self.b_lina = Button(self.f_catalog, text="Lina", command=self.run_lina)
         self.b_studente = Button(self.f_catalog, text='Monika', command=self.run_studente)
         self.b_studenciokas = Button(self.f_catalog, text="Dovydas", command=self.run_kryptis)
+        self.b_airida = Button(self.main, text="Airida", command=self.run_airida)
 
         self.l_pasirinkimai.pack(side=TOP)
         self.b_destytojas.pack()
@@ -25,11 +27,16 @@ class MainApp():
         self.b_lina.pack()
         self.b_studente.pack()
         self.b_studenciokas.pack()
+        self.b_airida.pack()
         self.f_catalog.pack()
 
     def run_destytojas(self):
         self.window_destytojas = Toplevel(self.main)
         self.app = Destytojas(self.window_destytojas)
+
+    def run_airida(self):
+        self.window_airida = Toplevel(self.main)
+        self.app = Airida(self.window_airida)
 
     def run_kryptis(self):
         self.window_studenciokas = Toplevel(self.main)
