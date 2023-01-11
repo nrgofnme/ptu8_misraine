@@ -1,5 +1,6 @@
 from tkinter import *
 from apps.destytojas import Destytojas
+from apps.kesgame import KesGame
 from apps.edvardas import Edvardas
 from apps.daiva import Daiva
 from apps.sandra import Sandra
@@ -32,7 +33,8 @@ class MainApp():
         self.b_sandra = Button(self.f_catalog, width=10, text="Sandra", command=self.run_sandra)
         self.b_daiva = Button(self.f_catalog, width=10, text='Daiva', command=self.run_daiva)
         self.b_edvardas = Button(self.f_catalog, text="Edvardas", command=self.run_edvardas)
-
+        self.b_kesgame = Button(self.f_catalog, width=10, text="Kesgame", command=self.run_kesgame)
+        
         self.l_pasirinkimai.pack(side=TOP)
         self.b_destytojas.pack()
         self.b_ignas.pack()
@@ -47,6 +49,7 @@ class MainApp():
         self.b_sandra.pack()
         self.b_daiva.pack()
         self.b_edvardas.pack()
+        self.b_kesgame.pack()
         self.f_catalog.pack()
 
     def run_redas(self):
@@ -57,6 +60,11 @@ class MainApp():
         self.window_destytojas = Toplevel(self.main)
         self.app = Destytojas(self.window_destytojas)
 
+    def run_kesgame(self):
+        self.window_kesgame = Toplevel(self.main)
+        self.game = KesGame(self.window_kesgame) 
+        self.game.pack_configure() 
+    
     def run_edvardas(self):
         self.window_edvardas = Toplevel(self.main)
         self.app = Edvardas(self.window_edvardas)
