@@ -10,19 +10,15 @@ class Daiva:
         self.l_spejimas = Label(self.f_langas, text='Atspėk skaičių (1-5), kad pamatytum mane su dinozauro kostiumu')
         self.e_spejimas = Entry(self.f_langas)
         self.b_spejimas = Button(self.f_langas, text='Spejimas', command=self.spejimas)
-        self.l_atspejai = Label(self.f_langas, text=None)
+        self.l_rezultatas = Label(self.f_langas, text=None)
         self.l_nuotrauka = Label(self.f_langas, image=None)
-        self.l_pralaimejai = Label(self.f_langas, text=None)
-        self.l_nuotrauka2 = Label(self.f_langas, image=None)
 
         self.f_langas.pack()
         self.l_spejimas.pack(side=TOP)
         self.e_spejimas.pack()
         self.b_spejimas.pack()
-        self.l_atspejai.pack()
+        self.l_rezultatas.pack()
         self.l_nuotrauka.pack()
-        self.l_pralaimejai.pack()
-        self.l_nuotrauka2.pack()
 
         self.main.mainloop()
         
@@ -30,12 +26,12 @@ class Daiva:
         atsakymas = randint(1, 5)
         spejimas = int(self.e_spejimas.get())
         if spejimas == atsakymas:
-            self.l_atspejai['text'] = 'Sveikinu, štai Homosaurus Rex nuotrauka'
+            self.l_rezultatas['text'] = 'Sveikinu, štai Homosaurus Rex nuotrauka'
             nuotrauka = ImageTk.PhotoImage(Image.open('images\daiva\dino.jpg'))
             self.l_nuotrauka['image'] = nuotrauka
             self.e_spejimas.delete(0, END)
         else:
-            self.l_pralaimejai['text'] = 'Nepataikei, štai paguodai kačiuko nuotrauka'
+            self.l_rezultatas['text'] = 'Nepataikei, štai paguodai kačiuko nuotrauka'
             nuotrauka2 = ImageTk.PhotoImage(Image.open('images\daiva\cat.jpg'))
-            self.l_nuotrauka2['image'] = nuotrauka2
+            self.l_nuotrauka['image'] = nuotrauka2
         self.main.mainloop()
