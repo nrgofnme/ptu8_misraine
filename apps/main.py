@@ -49,4 +49,4 @@ class MainApp():
 
     def run_donatas(self):
         self.window_donatas = Toplevel(self.main)
-        self.app = Donatas(self.window_lina)
+        self.app = Donatas(self.window_donatas)

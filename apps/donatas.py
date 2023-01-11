@@ -7,7 +7,7 @@ class Donatas():
         self.main = main
         self.main.title("Donato bandymas")
         self.f_demo = Frame(self.main)
-        photo = ImageTk.PhotoImage(Image.open('images/donatas/katedra.jpg'))
+        photo = ImageTk.PhotoImage(Image.open('images/donatas/elniukai.jpeg'))
         self.l_paveiksliukas = Label(self.main, image=photo)
         self.b_linkas = Button(self.f_demo, text="mano kodas", width=10, command=self.open_donatas_github)
         self.b_close = Button(self.f_demo, text="uzdaryti", width=10, command=self.close_window)
