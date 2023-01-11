@@ -11,14 +11,14 @@ class MainApp():
     def __init__(self, main):
         self.main = main
         self.f_catalog = Frame(self.main)
-        self.l_pasirinkimai = Label(self.f_catalog, text="Pasirinkite")
-        self.b_destytojas = Button(self.f_catalog, text="Destytojas", command=self.run_destytojas)
-        self.b_giedrius = Button(self.f_catalog, text="Giedrius", command=self.run_giedrius)
-        self.b_ignas = Button(self.f_catalog, text="Ignas",command=self.run_ignas)
-        self.b_lina = Button(self.f_catalog, text="Lina", command=self.run_lina)
-        self.b_studente = Button(self.f_catalog, text='Monika', command=self.run_studente)
-        self.b_studenciokas = Button(self.f_catalog, text="Dovydas", command=self.run_kryptis)
-        self.b_airida = Button(self.main, text="Airida", command=self.run_airida)
+        self.l_pasirinkimai = Label(self.f_catalog, width=10, text="Pasirinkite")
+        self.b_destytojas = Button(self.f_catalog, width=10, text="Destytojas", command=self.run_destytojas)
+        self.b_giedrius = Button(self.f_catalog, width=10, text="Giedrius", command=self.run_giedrius)
+        self.b_ignas = Button(self.f_catalog, width=10, text="Ignas",command=self.run_ignas)
+        self.b_lina = Button(self.f_catalog, width=10, text="Lina", command=self.run_lina)
+        self.b_studente = Button(self.f_catalog, width=10, text='Monika', command=self.run_studente)
+        self.b_studenciokas = Button(self.f_catalog, width=10, text="Dovydas", command=self.run_kryptis)
+        self.b_airida = Button(self.f_catalog, width=10, text="Airida", command=self.run_airida)
 
         self.l_pasirinkimai.pack(side=TOP)
         self.b_destytojas.pack()
