@@ -15,3 +15,11 @@ class MainApp():
     def run_destytojas(self):
         self.window_destytojas = Toplevel(self.main)
         self.app = Destytojas(self.window_destytojas)
+
+from apps.airida import Airida
+
+run_airida = Airida()
+run_airida.pasisveikinti
+
+
+
