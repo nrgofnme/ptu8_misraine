@@ -32,7 +32,7 @@ class MainApp():
         self.b_redas = Button(self.f_catalog, width=10, text="Redas", command=self.run_redas)
         self.b_sandra = Button(self.f_catalog, width=10, text="Sandra", command=self.run_sandra)
         self.b_daiva = Button(self.f_catalog, width=10, text='Daiva', command=self.run_daiva)
-        self.b_edvardas = Button(self.f_catalog, text="Edvardas", command=self.run_edvardas)
+        self.b_edvardas = Button(self.f_catalog, width=10, text="Edvardas", command=self.run_edvardas)
         self.b_kesgame = Button(self.f_catalog, width=10, text="Kesgame", command=self.run_kesgame)
         
         self.l_pasirinkimai.pack(side=TOP)

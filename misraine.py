@@ -4,7 +4,7 @@ from apps.main import MainApp
 def run_main_app():
     root = Tk()
     root.title("PTU8 Mišrainė")
-    root.geometry("500x500")
+    root.geometry("200x500")
     app = MainApp(root)
     root.mainloop()
 
