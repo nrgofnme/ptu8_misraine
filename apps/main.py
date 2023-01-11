@@ -7,6 +7,7 @@ from apps.monika import Studente
 from apps.igno_app import IgnoApp
 from apps.giedrius import Giedrius
 from apps.lina import Lina
+from apps.donatas import Donatas
 
 
 class MainApp():
@@ -22,6 +23,7 @@ class MainApp():
         self.b_studenciokas = Button(self.f_catalog, width=10, text="Dovydas", command=self.run_kryptis)
         self.b_airida = Button(self.f_catalog, width=10, text="Airida", command=self.run_airida)
         self.b_egle = Button(self.f_catalog, width=10, text="Eglė", command=self.run_egle)
+        self.b_donatas = Button (self.f_catalog, text='Donatas', command=self.run_donatas)
 
         self.l_pasirinkimai.pack(side=TOP)
         self.b_destytojas.pack()
@@ -32,6 +34,7 @@ class MainApp():
         self.b_studenciokas.pack()
         self.b_airida.pack()
         self.b_egle.pack()
+        self.b_donatas.pack()
         self.f_catalog.pack()
 
     def run_destytojas(self):
@@ -65,3 +68,7 @@ class MainApp():
     def run_lina(self):
         self.window_lina = Toplevel(self.main)
         self.app = Lina(self.window_lina)
+
+    def run_donatas(self):
+        self.window_donatas = Toplevel(self.main)
+        self.app = Donatas(self.window_donatas)
