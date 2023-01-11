@@ -1,5 +1,6 @@
 from tkinter import *
 from apps.destytojas import Destytojas
+from apps.edvardas import Edvardas
 from apps.daiva import Daiva
 from apps.sandra import Sandra
 from apps.redas import Redas
@@ -30,6 +31,7 @@ class MainApp():
         self.b_redas = Button(self.f_catalog, width=10, text="Redas", command=self.run_redas)
         self.b_sandra = Button(self.f_catalog, width=10, text="Sandra", command=self.run_sandra)
         self.b_daiva = Button(self.f_catalog, width=10, text='Daiva', command=self.run_daiva)
+        self.b_edvardas = Button(self.f_catalog, text="Edvardas", command=self.run_edvardas)
 
         self.l_pasirinkimai.pack(side=TOP)
         self.b_destytojas.pack()
@@ -44,6 +46,7 @@ class MainApp():
         self.b_redas.pack()
         self.b_sandra.pack()
         self.b_daiva.pack()
+        self.b_edvardas.pack()
         self.f_catalog.pack()
 
     def run_redas(self):
@@ -54,6 +57,10 @@ class MainApp():
         self.window_destytojas = Toplevel(self.main)
         self.app = Destytojas(self.window_destytojas)
 
+    def run_edvardas(self):
+        self.window_edvardas = Toplevel(self.main)
+        self.app = Edvardas(self.window_edvardas)
+        
     def run_daiva(self):
         self.window_daiva = Toplevel(self.main)
         self.app = Daiva(self.window_daiva)
