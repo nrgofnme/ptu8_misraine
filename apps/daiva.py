@@ -27,11 +27,11 @@ class Daiva:
         spejimas = int(self.e_spejimas.get())
         if spejimas == atsakymas:
             self.l_rezultatas['text'] = 'Sveikinu, štai Homosaurus Rex nuotrauka'
-            nuotrauka = ImageTk.PhotoImage(Image.open('images\daiva\dino.jpg'))
+            nuotrauka = ImageTk.PhotoImage(Image.open('images/daiva/dino.jpg'))
             self.l_nuotrauka['image'] = nuotrauka
             self.e_spejimas.delete(0, END)
         else:
             self.l_rezultatas['text'] = 'Nepataikei, štai paguodai kačiuko nuotrauka'
-            nuotrauka2 = ImageTk.PhotoImage(Image.open('images\daiva\cat.jpg'))
+            nuotrauka2 = ImageTk.PhotoImage(Image.open('images/daiva/cat.jpg'))
             self.l_nuotrauka['image'] = nuotrauka2
         self.main.mainloop()
