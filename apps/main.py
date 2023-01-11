@@ -1,5 +1,6 @@
 from tkinter import *
 from apps.destytojas import Destytojas
+from apps.redas import Redas
 from apps.egle import Egle
 from apps.airida import Airida
 from apps.dovydas import Studenciokas
@@ -24,6 +25,7 @@ class MainApp():
         self.b_airida = Button(self.f_catalog, width=10, text="Airida", command=self.run_airida)
         self.b_egle = Button(self.f_catalog, width=10, text="Eglė", command=self.run_egle)
         self.b_donatas = Button (self.f_catalog, text='Donatas', command=self.run_donatas)
+        self.b_redas = Button(self.f_catalog, text="Redas", command=self.run_redas)
 
         self.l_pasirinkimai.pack(side=TOP)
         self.b_destytojas.pack()
@@ -35,7 +37,12 @@ class MainApp():
         self.b_airida.pack()
         self.b_egle.pack()
         self.b_donatas.pack()
+        self.b_redas.pack()
         self.f_catalog.pack()
+
+    def run_redas(self):
+        self.window_redas = Toplevel(self.main)
+        self.app = Redas(self.window_redas)
 
     def run_destytojas(self):
         self.window_destytojas = Toplevel(self.main)
