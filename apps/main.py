@@ -4,6 +4,7 @@ from apps.monika import Studente
 from apps.igno_app import IgnoApp
 from apps.giedrius import Giedrius
 from apps.lina import Lina
+from apps.donatas import Donatas
 
 class MainApp():
     def __init__(self, main):
@@ -15,8 +16,10 @@ class MainApp():
         self.b_ignas = Button(self.f_catalog, text="Ignas",command=self.run_ignas)
         self.b_lina = Button(self.f_catalog, text="Lina", command=self.run_lina)
         self.b_studente = Button(self.f_catalog, text='Monika', command=self.run_studente)
-
+        self.b_donatas = Button (self.f_catalog, text='Donatas', command=self.run_donatas)
+        
         self.l_pasirinkimai.pack(side=TOP)
+        self.b_donatas.pack()
         self.b_destytojas.pack()
         self.b_ignas.pack()
         self.b_giedrius.pack()
@@ -43,3 +46,7 @@ class MainApp():
     def run_lina(self):
         self.window_lina = Toplevel(self.main)
         self.app = Lina(self.window_lina)
+
+    def run_donatas(self):
+        self.window_donatas = Toplevel(self.main)
+        self.app = Donatas(self.window_lina)
