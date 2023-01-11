@@ -14,7 +14,7 @@ class MainApp():
         self.b_giedrius = Button(self.f_catalog, text="Giedrius", command=self.run_giedrius)
         self.b_ignas = Button(self.f_catalog, text="Ignas",command=self.run_ignas)
         self.b_lina = Button(self.f_catalog, text="Lina", command=self.run_lina)
-        self.b_studente = Button(self.f_catalog, text='Studente', command=self.run_studente)
+        self.b_studente = Button(self.f_catalog, text='Monika', command=self.run_studente)
 
         self.l_pasirinkimai.pack(side=TOP)
         self.b_destytojas.pack()
