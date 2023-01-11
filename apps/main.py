@@ -13,6 +13,7 @@ from apps.igno_app import IgnoApp
 from apps.giedrius import Giedrius
 from apps.lina import Lina
 from apps.donatas import Donatas
+from apps.gediminas import Gediminas
 
 
 class MainApp():
@@ -34,6 +35,7 @@ class MainApp():
         self.b_daiva = Button(self.f_catalog, width=10, text='Daiva', command=self.run_daiva)
         self.b_edvardas = Button(self.f_catalog, width=10, text="Edvardas", command=self.run_edvardas)
         self.b_kesgame = Button(self.f_catalog, width=10, text="Kesgame", command=self.run_kesgame)
+        self.b_gediminas = Button(self.f_catalog, width=10, text="Gediminas", command=self.run_gediminas)
         
         self.l_pasirinkimai.pack(side=TOP)
         self.b_destytojas.pack()
@@ -50,6 +52,7 @@ class MainApp():
         self.b_daiva.pack()
         self.b_edvardas.pack()
         self.b_kesgame.pack()
+        self.b_gediminas.pack()
         self.f_catalog.pack()
 
     def run_redas(self):
@@ -108,3 +111,7 @@ class MainApp():
     def run_donatas(self):
         self.window_donatas = Toplevel(self.main)
         self.app = Donatas(self.window_donatas)
+
+    def run_gediminas(self):
+        self.window_gediminas = Toplevel(self.main)
+        self.app = Gediminas(self.window_gediminas)
