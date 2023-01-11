@@ -1,5 +1,6 @@
 from tkinter import *
 from apps.destytojas import Destytojas
+from apps.airida import Airida
 
 class MainApp():
     def __init__(self, main):
@@ -16,10 +17,9 @@ class MainApp():
         self.window_destytojas = Toplevel(self.main)
         self.app = Destytojas(self.window_destytojas)
 
-from apps.airida import Airida
-
-run_airida = Airida()
-run_airida.pasisveikinti
+    def run_airida(self):
+        self.window_airida = Toplevel(self.main)
+        self.app = Airida(self.window_airida)
 
 
 
